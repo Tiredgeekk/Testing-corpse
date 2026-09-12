@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Literary Exquisite Corpse ✒️</title>
+
+<link rel="stylesheet" href="corpse-style.css">
+    
+</head>
+
+
+<body>
+
+
+<header class="site-header">
+
+    <!-- CLUB LOGO -->
+    <img 
+    src="https://i.imgur.com/nVopjPV.png"
+    alt="UFV Literature Club Logo"
+    class="club-logo"
+    >
+
+    <h1>✒️ Literary Exquisite Corpse</h1>
+
+    <p>
+        Collaboratively write a story one hidden paragraph at a time.
+    </p>
+
+</header>
+
+
+
+
+
+<main class="corpse-container">
+
+
+<div class="paper-card">
+
+ <a href="index.html" class="back-button">
+    ← Back to Prompt Hub
+</a>
+
+<!-- =====================
+     SETUP SCREEN
+===================== -->
+
+
+<section id="setup-screen">
+
+
+<h2>Story Setup</h2>
+
+
+<p>
+Create the world before the chaos begins!
+</p>
+
+
+
+<label>
+Characters:
+</label>
+
+<textarea id="characters" placeholder="Example: A detective, a ghost, a suspicious librarian"></textarea>
+
+
+
+<label>
+Setting:
+</label>
+
+<textarea id="setting" placeholder="Example: An abandoned Victorian mansion"></textarea>
+
+
+
+<label>
+Genre:
+</label>
+
+<textarea id="genre" placeholder="Example: Mystery Fantasy"></textarea>
+
+
+
+<label>
+Optional Prompt:
+</label>
+
+<textarea id="prompt" placeholder="Example: Someone is hiding a secret"></textarea>
+
+
+
+<label>
+Number of Writers:
+</label>
+
+<input 
+type="number"
+id="writer-count"
+min="2"
+max="50"
+value="6"
+>
+
+
+<label>
+Difficulty:
+</label>
+
+<select id="difficulty">
+
+    <option value="easy">
+        🕯️ Easy — Last Two Words
+    </option>
+
+    <option value="normal">
+        🪦 Normal — No Peeking
+    </option>
+
+</select>
+
+
+<p class="difficulty-description">
+    <strong>Easy:</strong> See the last two words of the previous
+    writer's final sentence.<br>
+
+    <strong>Normal:</strong> See absolutely nothing from previous writers.
+</p>
+
+
+
+<button onclick="startStory()">
+📖 Start Story
+</button>
+
+
+</section>
+
+
+
+
+
+
+<!-- =====================
+     PASS DEVICE SCREEN
+===================== -->
+
+
+<section id="pass-screen" class="hidden">
+
+
+<h2>📱 Pass the Device</h2>
+
+
+<p>
+Hand the device to the next writer.
+</p>
+
+
+<p class="warning">
+🚫 No peeking!
+</p>
+
+
+<button onclick="readyWriter()">
+I'm Ready ✒️
+</button>
+
+
+</section>
+
+
+
+
+
+
+<!-- =====================
+     WRITING SCREEN
+===================== -->
+
+
+<section id="writing-screen" class="hidden">
+
+
+<h2 id="writer-number">
+Writer 1
+</h2>
+
+
+
+<div class="story-info">
+
+
+<p>
+<strong>Characters:</strong>
+<span id="display-characters"></span>
+</p>
+
+
+<p>
+<strong>Setting:</strong>
+<span id="display-setting"></span>
+</p>
+
+
+<p>
+<strong>Genre:</strong>
+<span id="display-genre"></span>
+</p>
+
+
+<p>
+<strong>Prompt:</strong>
+<span id="display-prompt"></span>
+</p>
+
+
+</div>
+
+
+
+<div id="previous-hint" class="previous-hint hidden">
+
+    <strong>🕯️ A tiny glimpse from the previous writer:</strong>
+
+    <p id="hint-text"></p>
+
+</div>
+
+
+<h3>
+Write your paragraph:
+</h3>
+
+<h3>
+Write your paragraph:
+</h3>
+
+
+
+<textarea 
+id="writer-input"
+placeholder="Write your part of the story..."
+></textarea>
+
+
+
+<button onclick="submitLine()">
+Next Writer →
+</button>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- =====================
+     REVEAL SCREEN
+===================== -->
+
+
+<section id="reveal-screen" class="hidden">
+
+
+<h2>
+✨ The Finished Story ✨
+</h2>
+
+
+
+<div class="final-info">
+
+<p>
+<strong>Characters:</strong>
+<span id="final-characters"></span>
+</p>
+
+
+<p>
+<strong>Setting:</strong>
+<span id="final-setting"></span>
+</p>
+
+
+<p>
+<strong>Genre:</strong>
+<span id="final-genre"></span>
+</p>
+
+
+</div>
+
+
+
+
+<div id="final-story">
+
+</div>
+
+
+
+<button onclick="resetGame()">
+🔄 Create Another Story
+</button>
+
+
+
+</section>
+
+
+
+
+</div>
+
+
+</main>
+
+
+
+
+
+<footer>
+
+UFV Literature Club Edition ✦
+
+</footer>
+
+
+
+<script src="corpse-script.js"></script>
+
+
+</body>
+
+</html>
