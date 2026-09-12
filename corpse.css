@@ -1,0 +1,478 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Libre+Baskerville:wght@400;700&display=swap');
+
+
+/* =========================
+   RESET
+========================= */
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+
+/* =========================
+   BODY
+========================= */
+
+
+body {
+
+    background: #f4ead8;
+
+    color: #2b1d17;
+
+    font-family: "Libre Baskerville", serif;
+
+    min-height: 100vh;
+
+    line-height: 1.6;
+
+}
+
+
+
+body::before {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+    radial-gradient(rgba(70,45,30,.08) 1px, transparent 1px);
+
+    background-size: 8px 8px;
+
+    opacity: .35;
+
+    pointer-events: none;
+
+}
+
+
+
+/* =========================
+   HEADER
+========================= */
+
+
+.site-header {
+
+    text-align: center;
+
+    padding: 35px 20px 20px;
+
+}
+
+
+
+.club-logo {
+
+    width: 130px;
+
+    margin-bottom: 15px;
+
+}
+
+
+
+.site-header h1 {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 3rem;
+
+    color: #3b1f2b;
+
+}
+
+
+
+.site-header p {
+
+    color: #6b2638;
+
+    font-style: italic;
+
+}
+
+
+
+/* =========================
+   BACK BUTTON
+========================= */
+
+
+.back-button {
+
+    display: inline-block;
+
+    text-decoration: none;
+
+    color: #6b2638;
+
+    font-weight: bold;
+
+    margin-bottom: 20px;
+
+}
+
+
+
+.back-button:hover {
+
+    color: #8c4054;
+
+}
+
+
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+
+.corpse-container {
+
+    max-width: 850px;
+
+    margin: 30px auto;
+
+    padding: 20px;
+
+}
+
+
+
+/* =========================
+   PAPER CARD
+========================= */
+
+
+.paper-card {
+
+    background: #fff8e8;
+
+    border: 2px solid #b7b7b7;
+
+    border-radius: 15px;
+
+    padding: 35px;
+
+    box-shadow:
+    0 8px 20px rgba(0,0,0,.15);
+
+}
+
+
+
+/* =========================
+   TITLES
+========================= */
+
+
+h2 {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 2.5rem;
+
+    color: #5a1f33;
+
+    text-align: center;
+
+    margin-bottom: 15px;
+
+}
+
+
+
+h3 {
+
+    color: #5a1f33;
+
+}
+
+
+
+/* =========================
+   TEXT / INFO BOXES
+========================= */
+
+
+.story-info,
+.final-info {
+
+    background: #fcf8ef;
+
+    border-left: 4px solid #6b2638;
+
+    padding: 15px;
+
+    margin: 20px 0;
+
+    text-align: left;
+
+    border-radius: 10px;
+
+}
+
+
+
+.warning {
+
+    color: #6b2638;
+
+    font-weight: bold;
+
+}
+
+
+
+/* =========================
+   INPUTS
+========================= */
+
+
+input,
+textarea {
+
+    width: 100%;
+
+    padding: 12px;
+
+    margin: 10px 0 20px;
+
+    border-radius: 8px;
+
+    border: 2px solid #b7b7b7;
+
+    font-family: inherit;
+
+    background: white;
+
+}
+
+
+
+textarea {
+
+    min-height: 100px;
+
+    resize: vertical;
+
+}
+
+
+
+label {
+
+    display: block;
+
+    color: #6b2638;
+
+    font-weight: bold;
+
+    margin-top: 10px;
+
+}
+select {
+
+    width: 100%;
+
+    padding: 12px;
+
+    margin: 10px 0 10px;
+
+    border-radius: 8px;
+
+    border: 2px solid #b7b7b7;
+
+    font-family: inherit;
+
+    background: white;
+
+    color: #2b1d17;
+
+    font-size: 1rem;
+
+}
+
+
+.difficulty-description {
+
+    background: #fcf8ef;
+
+    border-left: 4px solid #6b2638;
+
+    padding: 12px 15px;
+
+    margin: 5px 0 20px;
+
+    border-radius: 8px;
+
+    font-size: .9rem;
+
+    color: #5f4a4a;
+
+}
+
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+
+button {
+
+    display: block;
+
+    margin: 20px auto;
+
+    background: #6b2638;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 8px;
+
+    padding: 14px 25px;
+
+    font-family: inherit;
+
+    font-size: 1rem;
+
+    cursor: pointer;
+
+    transition: .25s;
+
+}
+
+
+
+button:hover {
+
+    background: #8c4054;
+
+    transform: translateY(-2px);
+
+}
+
+
+
+/* =========================
+   FINAL STORY
+========================= */
+
+
+#final-story {
+
+    background: #fcf8ef;
+
+    border: 2px solid #b7b7b7;
+
+    border-radius: 12px;
+
+    padding: 25px;
+
+    margin: 25px 0;
+
+    text-align: left;
+
+    overflow-wrap: anywhere;
+
+}
+
+
+
+.story-paragraph {
+
+    margin-bottom: 20px;
+
+    line-height: 1.8;
+
+}
+
+/* =========================
+   PREVIOUS WRITER HINT
+========================= */
+
+.previous-hint {
+
+    background: #f4ead8;
+
+    border: 2px dashed #6b2638;
+
+    border-radius: 10px;
+
+    padding: 15px;
+
+    margin: 20px 0;
+
+    text-align: center;
+
+}
+
+
+.previous-hint strong {
+
+    color: #6b2638;
+
+}
+
+
+#hint-text {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 1.5rem;
+
+    font-weight: 600;
+
+    font-style: italic;
+
+    margin-top: 8px;
+
+    color: #3b1f2b;
+
+}
+
+/* =========================
+   SCREEN CONTROL
+========================= */
+
+
+.hidden {
+
+    display: none !important;
+
+}
+
+
+
+/* =========================
+   FOOTER
+========================= */
+
+
+footer {
+
+    text-align: center;
+
+    margin-top: 40px;
+
+    padding: 20px;
+
+    color: #6f6265;
+
+    font-style: italic;
+
+}
